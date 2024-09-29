@@ -1,0 +1,65 @@
+* {
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+/* Hero Section Style */
+.hero-section {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    z-index: 1;
+    padding: 0 15px; /* Padding for small screens */
+}
+
+/* Background image with brightness adjustment */
+.hero-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('assets/heroimg.jpg'); /* Replace with your image URL */
+    background-size: cover;
+    background-position: center;
+    filter: brightness(70%); /* Adjust brightness to 70% */
+    z-index: -1; /* Place behind the content */
+    background-color: rgba(0, 0, 0, 0.2); /* Optional: fallback color */
+}
+
+/* Default large screen text size */
+.hero-section h1 {
+    font-size: 8rem;
+}
+
+nav {
+    font-size: 1.2rem;
+}
+
+/* Media query for screens with max-width 768px (tablets and small devices) */
+@media (max-width: 768px) {
+    .hero-section h1 {
+        font-size: 5rem; /* Reduce font size */
+    }
+    .akhai {
+        display:none;
+    }
+}
+
+/* Media query for screens with max-width 576px (mobile devices) */
+@media (max-width: 576px) {
+    .hero-section h1 {
+        font-size: 3rem; /* Even smaller font size for mobile */
+    }
+
+    /* Additional adjustments for mobile responsiveness */
+    .hero-section {
+        padding: 0 10px; /* Adjust padding for small mobile screens */
+    }
+}
