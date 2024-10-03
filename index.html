@@ -11,6 +11,41 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <style>
+        .best-seller .product-card {
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .best-seller .product-card img {
+            width: 100%;
+            transition: all 0.4s ease;
+        }
+
+        .best-seller .product-card:hover img {
+            filter: blur(3px) brightness(50%);
+        }
+
+        .best-seller .product-info {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: white;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .best-seller .product-card:hover .product-info {
+            opacity: 1;
+        }
+
+        .best-seller h3, .best-seller p {
+            margin: 0;
+        }
+    </style>
 </head>
 <body class="bg-gray-100">
 
@@ -24,6 +59,9 @@
             <!-- Navbar Links -->
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav mx-auto text-center">
+                    <li class="nav-item"></li>
+                        <a class="nav-link px-3 home" href="#home" style="color: rgb(239, 239, 239);">Home</a>
+                    </li>
                     <li class="nav-item">
                         <a class="nav-link px-3" href="#" style="color: rgb(239, 239, 239);">Product</a>
                     </li>
@@ -45,7 +83,83 @@
         </div>
     </section>
 
-    
+    <!-- BEST SELLER SECTION -->
+    <section class="best-seller py-5" id="best-seller">
+        <div class="mx-5 img-fluid">
+            <h2 class="text-center mb-5">Best Sellers</h2>
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+                <!-- Product 1 -->
+               <div class="col product1">
+                    <div class="product-card">
+                        <img src="assets/baju1.jpg" alt="Product 1">
+                        <div class="product-info">
+                            <h3>Product 1</h3>
+                            <p>Best quality fabric</p>
+                            <div class="review-stars">
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                              </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                <!-- Product 2 -->
+                <div class="col product2">
+                    <div class="product-card" >
+                        <img src="assets/baju1.jpg" alt="Product 2">
+                        <div class="product-info">
+                            <h3>Product 2</h3>
+                            <p>Elegant design</p>
+                            <div class="review-stars">
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                              </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product 3 -->
+                <div class="col product3">
+                    <div class="product-card">
+                        <img src="assets/baju1.jpg" alt="Product 3">
+                        <div class="product-info">
+                            <h3>Product 3</h3>
+                            <p>Comfortable fit</p>
+                            <div class="review-stars">
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                              </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product 4 -->
+                <div class="col product4">
+                    <div class="product-card">
+                        <img src="assets/baju1.jpg" alt="Product 4">
+                        <div class="product-info">
+                            <h3>Product 4</h3>
+                            <p>Classic style</p>
+                            <div class="review-stars">
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                              </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
